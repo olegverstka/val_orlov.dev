@@ -1,3 +1,134 @@
 @import "../mixin/_mixing.scss";
 @import "_variables.scss";
 
+.service {
+	margin: 64px 0;
+	padding: 64px 0 0 0;
+	text-align: center;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	h1 {
+		font-family: RobotoSlab;
+		font-size: 35px;
+		font-weight: 300;
+		line-height: 33px;
+		letter-spacing: 3px;
+		margin: 47px 0 -8px 0;
+		text-transform: uppercase;
+		&::after {
+			@include sprite($s-line);
+			display: block;
+			content: "";
+			margin: 13px auto 0;
+		}
+	}
+	.zag {
+		font-family: robotocondensedregular;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 52px;
+		letter-spacing: 2px;
+		margin: 0 0 45px 0;
+	}
+}
+.item_service {
+	float: left;
+	text-align: center;
+	vertical-align: top;
+	width: 20%;
+	img {
+		margin: 0 auto 60px;
+	}
+	.item_service_zag {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 20px;
+		margin-bottom: 44px;
+		text-transform: uppercase;
+	}
+	.item_service_desc {
+		color: #5772a6;
+		font-family: robotocondensedregular;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+		margin: 0 auto;
+		width: 135px;
+	}
+}
+.about_me {
+	background: url("../img/bg_section_3.jpg") no-repeat bottom center;
+	padding: 65px 0 0 0;
+	h2 {
+		font-family: robotoboldcondensed;
+		font-size: 68px;
+		font-weight: 300;
+		line-height: 33px;
+		margin: 87px 0 51px 37px;
+		text-transform: uppercase;
+	}
+	.wisiwig_text {
+		margin: 0 0 0 37px;
+	}
+	img {
+		display: block;
+    	margin: 0 0 0 11px;
+	}
+}
+.said {
+	background-color: #8da4d0;
+	border-radius: 6px;
+	position: absolute;
+	top: 429px;
+	left: 45px;
+	padding: 20px 45px;
+	text-align: center;
+	width: 420px;
+	&::before {
+		content: "";
+		border-color: transparent transparent #8da4d0 #8da4d0;
+		border-style: solid;
+		border-width: 17px 13px;
+		top: -34px;
+		height: 0;
+		right: 48px;
+		position: absolute;
+		width: 26px;
+	}
+}
+.music {
+	background: url("../img/bg_section_4.jpg") no-repeat top center;
+	height: 865px;
+	h2 {
+		color: #fff;
+		color: #fff;
+		font-family: robotocondensedregular;
+		font-size: 51px;
+		font-weight: 700;
+		line-height: 52px;
+		margin: 231px auto 31px;
+		text-transform: uppercase;
+		text-align: center;
+		width: 350px;
+		&::after {
+			@include sprite($s-line);
+			display: block;
+			content: "";
+			margin: 35px auto 0;
+		}
+	}
+	.wisiwig_text {
+		margin: 0 auto 45px;
+		width: 690px;
+		p {
+			color: #fff;
+			line-height: 19px;
+    		margin: 0 0 23px;
+			text-align: center;
+		}
+	}
+}

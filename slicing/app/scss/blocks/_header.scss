@@ -1,2 +1,133 @@
 @import "../mixin/_mixing.scss";
 @import "_variables.scss";
+
+.header {
+	background: url("../img/bg_head.jpg") no-repeat center top;
+	height: 821px;
+	padding: 0 0 64px 0;
+	overflow: hidden;
+	.persone {
+		img {
+			margin: 48px 0 0 87px;
+		}
+	}
+}
+.logo {
+	margin: 79px 0 0 63px;
+}
+.main_menu {
+	@include clearfix;
+	margin: 81px 0 0 -88px;
+	ul {
+		li {
+			list-style: none;
+			float: left;
+			margin: 0 37px 0 0;
+			a {
+				color: #fff;
+				font: 13px "robotoboldcondensed";
+				padding: 0 0 6px;
+				text-transform: uppercase;
+				&.active {
+					border-bottom: 	3px solid #fff;
+				}
+				&:hover {
+					border-bottom: 	3px solid #fff;
+					text-decoration: none;
+				}
+			}
+
+		}
+	}
+}
+.descr {
+	color: #fff;
+	font: 16px robotocondensedregular;
+	margin: 100px 0 0 52px;
+	text-align: center;
+	width: 275px;
+	line-height: 1.5;
+	span {
+		font: 16px "robotoboldcondensed";
+		text-transform: uppercase;
+	}
+}
+.holiday {
+	margin: 34px 0 0 117px;
+	.play {
+		width: 140px;
+	}
+}
+.fixed_block {
+	right: 52px;
+	position: fixed;
+	top: 0;
+	vertical-align: top;
+	width: 123px;
+}
+.phone {
+	@include sprite($s-phone);
+	display: inline-block;
+	margin: 14px 24px 0 0;
+	text-indent: -9999px;
+	vertical-align: top;
+	&:hover {
+		@include sprite($s-phone_hover);
+	}
+}
+.soc_block {
+	background: #142a3d;
+	display: inline-block;
+	margin: 0;
+	padding: 20px 9px 0;
+	position: relative;
+	vertical-align: top;
+	width: 55px;
+	&::before {
+		border-color: #142a3d #142a3d transparent;
+		border-style: solid;
+		border-width: 14px 27px;
+		bottom: -25px;
+		content: " ";
+		height: 0;
+		left: 0;
+		position: absolute;
+		width: 55px;
+	}
+	li {
+		list-style: none;
+		margin: 0 0 7px 0;
+		&:last-child {
+			margin: 0;
+		}
+		a {
+			height: 37px;
+			width: 37px;
+			display: block;
+			text-indent: -9999px;
+			position: relative;
+			&:hover {
+				background: #092338;
+			}
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			&.vk::before {
+				@include sprite($s-vk);
+				margin: -8px 0 0 -12px;
+			}
+			&.fb::before {
+				@include sprite($s-facebook);
+				margin: -11px 0 0 -6px;
+			}
+			&.ig::before {
+				@include sprite($s-instagram);
+				margin: -11px 0 0 -11px;
+			}
+		}
+	}
+}
