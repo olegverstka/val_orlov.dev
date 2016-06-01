@@ -102,7 +102,7 @@
 }
 .music {
 	background: url("../img/bg_section_4.jpg") no-repeat top center;
-	height: 865px;
+	height: 864px;
 	h2 {
 		color: #fff;
 		color: #fff;
@@ -129,6 +129,205 @@
 			line-height: 19px;
     		margin: 0 0 23px;
 			text-align: center;
+		}
+	}
+	.play {
+		margin: 0 auto;
+		width: 210px;
+	}
+}
+.video {
+	.col-md-3 {
+		padding: 0;
+	}
+	.video_link {
+		overflow: hidden;
+		position: relative;
+		img {
+			display: block;
+			max-width: 100%;
+			-moz-transition: all 1s ease-out;
+			-o-transition: all 1s ease-out;
+			-webkit-transition: all 1s ease-out;
+			transition: all 1s ease-out;
+		}
+		.play_large {
+			background: rgba(0, 0, 0, 0.7);
+			height: 100%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		&:hover {
+			img {
+				-webkit-transform: scale(1.2);
+				-moz-transform: scale(1.2);
+				-o-transform: scale(1.2);
+				transform: scale(1.2);
+			}
+			.play_large {
+				background: rgba(0, 0, 0, 0.1);
+				-moz-transition: all 1s ease-out;
+				-o-transition: all 1s ease-out;
+				-webkit-transition: all 1s ease-out;
+				transition: all 1s ease-out;
+			}
+		}
+	}
+	.play_large_wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		   -moz-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		     -o-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+	h3{
+		color: white;
+		font-family: robotocondensedregular;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 52px;
+		text-transform: uppercase;
+		text-align: center;
+	} 
+	p {
+		width: 217px;
+		color: white;
+		font-family: robotocondensedregular;
+		font-size: 16px;
+		font-weight: 300;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+}
+.galery {
+	h2 {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 51px;
+		font-weight: 700;
+		line-height: 52px;
+		margin: 102px 0 135px;
+		text-transform: uppercase;
+		text-align: center;
+		&::after {
+			@include sprite($s-line);
+			display: block;
+			content: "";
+			margin: 20px auto 0;
+		}
+	}
+	.wrap_photo {
+		position: relative;
+		min-height: 371px;
+		.bx-wrapper {
+			background: none;
+			border: none;
+			box-shadow: none;
+			.bxslider {
+				li {
+					width: 384px !important;
+					img {
+						border: 10px solid #efefef;
+						margin: 0 44px;
+						display: block;
+					}
+				}
+			}
+			.bx-prev {
+				@include sprite($s-slider_galery_left);
+				left: 44px;
+			}
+			.bx-next {
+				@include sprite($s-slider_galery_right);
+				right: 44px;
+			}
+			.bx-pager.bx-default-pager {
+				bottom: -126px;
+				a {
+					background: #ccc;
+					padding: 2px;
+					height: auto;
+					margin: 0 7px;
+					width: auto;
+					&.active, &:hover {
+						background: #8da4d0;
+						margin: 0 5px;
+						padding: 4px;
+					}
+				}
+			}
+		}
+		.bg_left {
+			@include sprite($s-bg_left);
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+		}
+		.bg_right {
+			@include sprite($s-bg_right);
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+.reviews {
+	background: url("../img/bg_section_7.jpg") no-repeat top center;
+	padding: 97px 0 0;
+	h2 {
+		color: #fff;
+		color: white;
+		font-family: robotocondensedregular;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 52px;
+		text-transform: uppercase;
+		text-align: center;
+		&::after {
+			@include sprite($s-line_2);
+			display: block;
+			content: "";
+			margin: 20px auto 0;
+		}
+	}
+}
+.wrap_reviews {
+	.bxreviews {
+		margin-left: 369px;
+    	margin-right: 369px;
+		li {
+			background: #fff;
+			width: 690px !important;
+			// height: 328px !important;
+			margin: 0 189px 0 0;
+			.review_item {
+				.review_img {
+					border-radius: 95px;
+					float: left;
+					height: 190px;
+					margin: 68px 0 0 61px;
+					overflow: hidden;
+					width: 190px;
+					img {
+						border-radius: 10px;
+						display: block;
+						max-width: 100%;
+					}
+				}
+			}
 		}
 	}
 }

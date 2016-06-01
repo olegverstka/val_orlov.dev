@@ -35,6 +35,13 @@ p {
 		color: #fff;
 	}
 }
+.play_large {
+	i {
+		@include sprite($s-video_play);
+		margin: 0 auto;
+		display: block;
+	}
+}
 .more {
 	background: #8da4d0;
 	border-radius: 3px;
@@ -50,4 +57,9 @@ p {
 	&:hover {
 		text-decoration: none;
 	}
+}
+.bx-wrapper {
+	background: none;
+	border: none;
+	box-shadow: none;
 }
