@@ -67,7 +67,7 @@
 							<a class="play" href="#"><i></i>Ваш праздник может выглядеть так</a>
 						</div>
 						<div class="fixed_block">
-							<a href="#" class="phone">Заказать звонок</a>
+							<a href="#call" class="phone link">Заказать звонок</a>
 							<ul class="soc_block">
 								<li><a class="vk" href="#">Вконтакте</a></li>
 								<li><a class="fb" href="#">Facebook</a></li>
@@ -737,6 +737,24 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- modal -->
+		<div id="call" class="modal">
+			<h2>Оставьте заявку на консультацию</h2>
+			<form action="#" method="POST">
+				<div class="form-row">
+					<label for="">Ваше имя:</label>
+					<input type="text" name="first_name">
+				</div>
+				<div class="form-row">
+					<label for="">Телефон:</label>
+					<input class="error" type="text" name="phone">
+				</div>
+				<div class="form-row">
+					<input class="btn" type="submit" value="Отправить">
+				</div>
+			</form>
+		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<!-- build:js js/vendor.js -->

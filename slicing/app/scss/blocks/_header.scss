@@ -173,6 +173,7 @@
 				display: inline-block;
 				margin: 0 33px;
 				a {
+					background: #fff;
 					color: black;
 					font-family: robotocondensedregular;
 					font-size: 12px;
@@ -180,6 +181,16 @@
 					line-height: 33px;
 					letter-spacing: 1px;
 					text-transform: uppercase;
+					position: relative;
+					&:hover::before, &.active::before {
+						@include sprite($s-main_menu_hover);
+						content: " ";
+						display: block;
+						position: absolute;
+						top: -16px;
+						left: 50%;
+						margin-left: -8px;
+					}
 				}
 			}
 		}
