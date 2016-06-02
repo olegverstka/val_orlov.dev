@@ -1,6 +1,9 @@
 @import "../mixin/_mixing.scss";
 @import "_variables.scss";
 
+body {
+	overflow-x: hidden;
+}
 h1, h2, h3, h4, h5, h6 {
 	
 }
@@ -62,4 +65,56 @@ p {
 	background: none;
 	border: none;
 	box-shadow: none;
+}
+.owl-nav {
+	.owl-prev {
+		@include sprite($s-slider_galery_left);
+		text-indent: -9999px;
+		position: absolute;
+		top: 61px;
+		left: 32px;
+		z-index: 2;
+		&:hover {
+			@include sprite($s-slider_galery_left_hover);
+			top: 56px;
+			left: 27px;
+		}
+	}
+	.owl-next {
+		@include sprite($s-slider_galery_right);
+		text-indent: -9999px;
+		position: absolute;
+		top: 61px;
+		right: 32px;
+		z-index: 2;
+		&:hover {
+			@include sprite($s-slider_galery_right_hover);
+			top: 56px;
+			right: 27px;
+		}
+	}
+}
+.owl-dots {
+	text-align: center;
+}
+.owl-dot {
+	display: inline-block;
+	vertical-align: middle;
+	span {
+		background: #ccc;
+		border-radius: 2px;
+		display: block;
+		height: 4px;
+		padding: 2px;
+		margin: 0 7px;
+		width: 4px;
+	}
+	&.active, &:hover {
+		span {
+			background: #8da4d0;
+			border-radius: 4px;
+			margin: 0 5px;
+			padding: 4px;
+		}
+	}
 }

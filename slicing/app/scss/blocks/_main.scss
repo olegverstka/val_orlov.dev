@@ -232,48 +232,8 @@
 		.owl-carousel {
 			z-index: inherit;
 		}
-		.owl-nav {
-			.owl-prev {
-				@include sprite($s-slider_galery_left);
-				text-indent: -9999px;
-				position: absolute;
-				top: 61px;
-				left: 32px;
-				z-index: 2;
-			}
-			.owl-next {
-				@include sprite($s-slider_galery_right);
-				text-indent: -9999px;
-				position: absolute;
-				top: 61px;
-				right: 32px;
-				z-index: 2;
-			}
-		}
 		.owl-dots {
 			margin: 117px 0 69px;
-			text-align: center;
-		}
-		.owl-dot {
-			display: inline-block;
-			vertical-align: middle;
-			span {
-				background: #ccc;
-				border-radius: 2px;
-    			display: block;
-    			height: 4px;
-				padding: 2px;
-				margin: 0 7px;
-				width: 4px;
-			}
-			&.active, &:hover {
-				span {
-					background: #8da4d0;
-					border-radius: 4px;
-					margin: 0 5px;
-					padding: 4px;
-				}
-			}
 		}		
 	}
 	.bg_left {
@@ -293,7 +253,7 @@
 }
 .reviews {
 	background: url("../img/bg_section_7.jpg") no-repeat top center;
-	padding: 97px 0 0;
+	padding: 97px 0 91px;
 	h2 {
 		color: #fff;
 		color: white;
@@ -301,6 +261,7 @@
 		font-size: 36px;
 		font-weight: 700;
 		line-height: 52px;
+		margin-bottom: 47px;
 		text-transform: uppercase;
 		text-align: center;
 		&::after {
@@ -312,29 +273,250 @@
 	}
 }
 .wrap_reviews {
-	.bxreviews {
-		margin-left: 369px;
-    	margin-right: 369px;
-		li {
+	margin: 0 auto;
+	width: 690px;
+	.owl-carousel {
+		.owl-stage-outer {
+			overflow: inherit;
+		}
+		.owl-nav {
+			.owl-prev {
+				@include sprite($s-review_left);
+				text-indent: -9999px;
+				position: absolute;
+				top: 152px;
+				left: -82px;
+				z-index: 2;
+				&:hover {
+					@include sprite($s-review_left_hover);
+					top: 147px;
+					left: -87px;
+				}
+			}
+			.owl-next {
+				@include sprite($s-review_right);
+				text-indent: -9999px;
+				position: absolute;
+				top: 152px;
+				right: -82px;
+				z-index: 2;
+				&:hover {
+					@include sprite($s-review_right_hover);
+					top: 147px;
+					right: -87px;
+				}
+			}
+		}
+		.owl-dots {
+			margin: 91px 0 0;
+		}
+		.owl-dot {
+			span {
+				background: #fff;
+			}
+			&.active, &:hover {
+				span {
+					background: #fff;
+				}
+			}
+		}
+	}
+	.owl-item {
+		.slide {
 			background: #fff;
-			width: 690px !important;
-			// height: 328px !important;
-			margin: 0 189px 0 0;
-			.review_item {
+			height: 328px;
+			.slide_left {
+				float: left;
+				width: 50%;
+				height: 328px;
+				position: relative;
 				.review_img {
-					border-radius: 95px;
-					float: left;
 					height: 190px;
-					margin: 68px 0 0 61px;
-					overflow: hidden;
 					width: 190px;
+					left: 50%;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
 					img {
-						border-radius: 10px;
-						display: block;
-						max-width: 100%;
+						border-radius: 95px;
 					}
 				}
 			}
+			.slide_right {
+				float: right;
+				width: 50%;
+				height: 328px;
+				position: relative;
+				.slide_text_wrap {
+					left: 50%;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width: 250px;
+				}
+				.slide_zag {
+					color: black;
+					font-family: robotocondensedregular;
+					font-size: 16px;
+					font-weight: 700;
+					line-height: 18px;
+					margin-bottom: 45px;
+					text-transform: uppercase;
+				}
+				.slide_text {
+					color: #5772a6;
+					font-family: robotocondensedregular;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 19px;
+					position: relative;
+					&::before {
+						@include sprite($s-cav_left);
+						content: " ";
+						display: block;
+						left: -19px;
+						position: absolute;
+						top: -11px;
+					}
+					&::after {
+						@include sprite($s-cav_right);
+						content: " ";
+						display: block;
+						right: 55px;
+						position: absolute;
+						bottom: -11px;
+					}
+				}
+			}
+		}
+	}
+}
+.floristics {
+	padding-bottom: 110px;
+	h2 {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 51px;
+		font-weight: 700;
+		line-height: 52px;
+		margin: 95px 0 65px;
+		text-transform: uppercase;
+		text-align: center;
+		&::after {
+			@include sprite($s-line);
+			display: block;
+			content: "";
+			margin: 20px auto 0;
+		}
+	}
+}
+.item_floristics {
+	margin: 0 auto;
+	width: 240px;
+	img {
+		display: block;
+		margin: 0 auto 49px;
+	}
+	.item_floristics_zag {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 18px;
+		margin: 0 0 22px 0;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.item_floristics_desc {
+		color: #5772a6;
+		font-family: robotocondensedregular;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18px;
+		margin: 0 0 37px 0;
+		text-align: center;
+	}
+	.more {
+		margin: 0 auto;
+	}
+}
+.publication {
+	padding-bottom: 110px;
+	h2 {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 51px;
+		font-weight: 700;
+		line-height: 52px;
+		margin: 98px 0 65px;
+		text-transform: uppercase;
+		text-align: center;
+		&::after {
+			@include sprite($s-line);
+			display: block;
+			content: "";
+			margin: 35px auto 0;
+		}
+	}
+	.owl-nav {
+		.owl-prev {
+			top: 230px;
+			left: -45px;
+			&:hover {
+				top: 225px;
+				left: -50px;
+			}
+		}
+		.owl-next {
+			top: 230px;
+			right: -45px;
+			&:hover {
+				top: 225px;
+				right: -50px;
+			}
+		}
+	}
+}
+.wrap_article {
+	margin: 0 0 52px 0;
+	.article_top {
+		@include clearfix;
+		margin: 0 0 26px 0;
+		.article_zag {
+			height: 109px;
+			vertical-align: middle;
+			display: table-cell;
+		}
+		a {
+			color: black;
+			font-family: RobotoSlab;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 21px;
+			text-decoration: underline;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.article_img {
+		float: left;
+		height: 109px;
+		margin: 0 28px 0 0;
+		width: 109px;
+		img {
+			border-radius: 95px;
+		}
+	}
+	.article_bottom {
+		p {
+			color: #5772a6;
+			font-family: robotocondensedregular;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 18px;
+			margin: 0 0 28px;
 		}
 	}
 }
