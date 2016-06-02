@@ -27,7 +27,9 @@
     "jquery-ui": "~1.11.4",
     "jquery-form-styler": "jquery.form-styler#~1.7.4",
     "Headhesive.js": "headhesive.js#~1.2.4",
-    "jquery.inputmask": "~3.2.7"
+    "jquery.inputmask": "~3.2.7",
+    "slick-carousel": "^1.6.0",
+    "owl.carousel": "^2.1.5"
   },
   "overrides": {
     "fancybox": {
@@ -59,6 +61,7 @@
     "jquery-ui": "^1.11.4",
     "Headhesive.js": "headhesive.js#~1.2.4",
     "jquery.inputmask": "~3.2.7",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "owl.carousel": "^2.1.5"
   }
 }
