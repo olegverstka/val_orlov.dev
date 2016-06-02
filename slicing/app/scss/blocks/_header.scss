@@ -15,6 +15,9 @@
 .logo {
 	margin: 79px 0 0 63px;
 }
+.logo_stick {
+	display: none;
+}
 .main_menu {
 	@include clearfix;
 	margin: 81px 0 0 -88px;
@@ -64,7 +67,7 @@
 	top: 0;
 	vertical-align: top;
 	width: 123px;
-	z-index: 1000;
+	z-index: 999;
 }
 .phone {
 	@include sprite($s-phone);
@@ -129,6 +132,66 @@
 				@include sprite($s-instagram);
 				margin: -11px 0 0 -11px;
 			}
+		}
+	}
+}
+.headhesive {
+	position: fixed;
+	width: 100%;
+	transform: translateY(-100%);
+	transition: 0.5s;
+	.logo, .descr, .holiday, .main_menu {
+		display: none;
+	}
+}
+.headhesive--stick {
+	transform: translateY(0);
+	z-index: 1000;
+	height: 65px;
+	border-bottom: 1px solid #d7d7d7;
+	background: #fff;
+	.logo_stick {
+		display: block;
+		float: left;
+		height: 48px;
+		left: 49px;
+		line-height: 65px;
+		position: absolute;
+		width: 174px
+	}
+	.main_menu {
+		display: block;
+		margin: 0 auto;
+		width: 1200px;
+		ul {
+			line-height: 65px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			li {
+				float: none;
+				display: inline-block;
+				margin: 0 33px;
+				a {
+					color: black;
+					font-family: robotocondensedregular;
+					font-size: 12px;
+					font-weight: 700;
+					line-height: 33px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	.phone {
+		@include sprite($s-phone_stick);
+		display: inline-block;
+		margin: 14px 24px 0 0;
+		text-indent: -9999px;
+		vertical-align: top;
+		&:hover {
+			@include sprite($s-phone_stick_hover);
 		}
 	}
 }

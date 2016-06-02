@@ -1,3 +1,7 @@
+var options = {
+	offset: 800
+}
+var header = new Headhesive('.head', options);
 $(document).ready(function(){
 
 	$('.publication_slider').owlCarousel({

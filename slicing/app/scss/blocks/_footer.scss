@@ -1,0 +1,136 @@
+.footer {
+	background: #8da4d0;
+	padding: 0 0 22px;
+	position: relative;
+	.foot_top {
+		margin: 71px 0 0 34px;
+	}
+	p {
+		color: white;
+		font-family: robotocondensedregular;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 14px;
+		margin: 0 0 14px;
+	}
+	.foot_zag {
+		color: white;
+		font-family: robotocondensedregular;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 18px;
+		margin: 0 0 26px;
+		text-transform: uppercase;
+	}
+	.logo_foot {
+		margin: 31px 0 0 34px;
+	}
+	.copy {
+		margin: 11px 0 0 36px;
+		p {
+			color: white;
+			font-family: robotocondensedregular;
+			font-size: 10px;
+			font-weight: 400;
+			line-height: 14px;
+		}
+	}
+	.text_right {
+		text-align: right;
+		margin: 71px 32px 0 0; 
+	}
+}
+.foot_bg_center {
+	background: #8da4d0;
+	height: 196px;
+	width: 392px;
+	position: absolute;
+	top: -29px;
+	left: 50%;
+	margin-left: -196px;
+	border-radius: 196px 196px 0 0;
+}
+.soc_menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline-block;
+		margin: 0 4px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+		a {
+			@include sprite($s-foot_vk);
+			display: block;
+			text-indent: 9999px;
+			&.fb {
+				@include sprite($s-foot_fb);
+			}
+			&.ig {
+				@include sprite($s-foot_ig);
+			}
+			&:hover {
+				@include sprite($s-foot_vk_hover);
+				&.fb {
+					@include sprite($s-foot_fb_hover);
+				}
+				&.ig {
+					@include sprite($s-foot_ig_hover);
+				}
+			}
+		}
+	}
+}
+.foot_phone {
+	margin: 43px 0 0;
+	p {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 52px;
+		text-align: center;
+		text-transform: uppercase;
+		i {
+			@include sprite($s-foot_phone);
+			display: block;
+			margin: 0 auto 9px;
+		}
+	}
+}
+.foot_email {
+	margin: 21px 0 0;
+	p {
+		color: black;
+		font-family: robotocondensedregular;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1;
+		text-align: center;
+		i {
+			@include sprite($s-foot_email);
+			display: block;
+			margin: 0 auto 9px;
+		}
+	}
+}
+.foot_feedback {
+	margin: 43px 0 0;
+	text-align: center;
+	.feedback {
+		background-color: white;
+		border-radius: 2px;
+		color: black;
+		font-family: RobotoRegular;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 18px;
+		padding: 12px 15px;
+		&:hover {
+			border: 2px solid #496fb7;
+			color: #496fb7;
+			text-decoration: none;
+		}
+	}
+}
